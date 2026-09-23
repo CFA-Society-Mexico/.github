@@ -11,6 +11,7 @@ import pytest
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PLACEHOLDER = "TODO-EMAIL"
+CONTACT = "staff@cfamexico.org"
 
 REQUIRED = [
     "README.md",
@@ -67,7 +68,7 @@ def test_profile_readme_sections():
         "https://www.cfasociety.org/mexico",
         "https://www.linkedin.com/company/cfa-society-mexico/",
         "https://github.com/orgs/CFA-Society-Mexico/discussions",
-        PLACEHOLDER,
+        CONTACT,
         "not endorsed by CFA Institute",
     ]:
         assert needle in text, ascii(needle)
@@ -77,7 +78,7 @@ def test_code_of_conduct_has_both_languages_and_contact():
     text = (ROOT / "CODE_OF_CONDUCT.md").read_text(encoding="utf-8")
     assert "# Código de Conducta convenido para Contribuyentes" in text
     assert "# Contributor Covenant Code of Conduct" in text
-    assert text.count(PLACEHOLDER) == 2
+    assert text.count(CONTACT) == 2
     assert "INSERT" not in text and "+++" not in text
 
 

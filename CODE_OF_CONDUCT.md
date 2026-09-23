@@ -39,7 +39,7 @@ Este código de conducta aplica tanto a espacios del proyecto como a espacios p�
 
 ## Aplicación
 
-Instancias de comportamiento abusivo, acosador o inaceptable de otro modo podrán ser reportadas a los administradores de la comunidad responsables del cumplimiento a través de TODO-EMAIL. Todas las quejas serán evaluadas e investigadas de una manera puntual y justa.
+Instancias de comportamiento abusivo, acosador o inaceptable de otro modo podrán ser reportadas a los administradores de la comunidad responsables del cumplimiento a través de staff@cfamexico.org. Todas las quejas serán evaluadas e investigadas de una manera puntual y justa.
 
 Todos los administradores de la comunidad están obligados a respetar la privacidad y la seguridad de quienes reporten incidentes.
 
@@ -123,7 +123,7 @@ This Code of Conduct applies within all community spaces, and also applies when 
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at TODO-EMAIL. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at staff@cfamexico.org. All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 

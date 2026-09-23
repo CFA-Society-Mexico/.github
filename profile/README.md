@@ -63,7 +63,7 @@ Guía completa: [CONTRIBUTING.md](https://github.com/CFA-Society-Mexico/.github/
 - Sitio web: [cfasociety.org/mexico](https://www.cfasociety.org/mexico)
 - LinkedIn: [CFA Society México](https://www.linkedin.com/company/cfa-society-mexico/)
 - Preguntas e ideas: [GitHub Discussions](https://github.com/orgs/CFA-Society-Mexico/discussions)
-- Contacto: TODO-EMAIL
+- Contacto: [staff@cfamexico.org](mailto:staff@cfamexico.org)
 
 <details>
 <summary><b>English</b></summary>
@@ -106,7 +106,7 @@ Full guide: [CONTRIBUTING.md](https://github.com/CFA-Society-Mexico/.github/blob
 - Website: [cfasociety.org/mexico](https://www.cfasociety.org/mexico)
 - LinkedIn: [CFA Society México](https://www.linkedin.com/company/cfa-society-mexico/)
 - Questions and ideas: [GitHub Discussions](https://github.com/orgs/CFA-Society-Mexico/discussions)
-- Contact: TODO-EMAIL
+- Contact: [staff@cfamexico.org](mailto:staff@cfamexico.org)
 
 </details>
 
