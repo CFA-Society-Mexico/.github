@@ -55,7 +55,7 @@ def test_relative_links_resolve():
 def test_profile_readme_sections():
     text = (ROOT / "profile" / "README.md").read_text(encoding="utf-8")
     for needle in [
-        'src="greeting.svg"',
+        'src="ticker.svg"',
         "## Quiénes somos",
         "## Proyectos / Projects",
         "## IA responsable",

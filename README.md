@@ -6,13 +6,13 @@ Perfil y archivos de comunidad por defecto de la organización
 *Profile and default community files for the
 [CFA Society México](https://github.com/CFA-Society-Mexico) organization.*
 
-## Regenerar el saludo / Regenerate the greeting
+## Regenerar la cinta / Regenerate the ticker
 
-Solo cuando cambian las palabras. Requiere Windows (Consolas Bold).
-*Only when the words change. Requires Windows (Consolas Bold).*
+Solo cuando cambian las palabras (`scripts/generate_ticker.py`).
+*Only when the words change (`scripts/generate_ticker.py`).*
 
 ```bash
 pip install -r scripts/requirements.txt
-python scripts/generate_greeting.py
+python scripts/generate_ticker.py
 python -m pytest -q
 ```

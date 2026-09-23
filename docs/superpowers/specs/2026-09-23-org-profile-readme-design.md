@@ -22,18 +22,18 @@ skills, and advance the profession.
 | 5 | Repo scope | README + RESPONSIBLE_AI + CONTRIBUTING + CODE_OF_CONDUCT + PR template |
 | 6 | Community links | Website + LinkedIn + contact email + GitHub Discussions |
 | 7 | Bilingual layout | Shared bilingual hero + table; Spanish body open; English in one `<details>` |
-| 8 | Header visual | ASCII greeting animation (SVG, adapted from alanvaa06/alanvaa06), then text hero; no org stats, no CI |
-| 9 | Greeting content | BIENVENIDOS -> WELCOME -> BEM-VINDOS; caption `finanzas / IA responsable / código abierto` |
+| 8 | Header visual | Stock-ticker tape (SMIL SVG, full width), then text hero; no org stats, no CI. Replaced the first ASCII greeting (too close to alanvaa06's personal profile) |
+| 9 | Ticker content | BIENVENIDOS ▲ WELCOME ▲ BEM-VINDOS ▲ FINANZAS ▲ AGENTIC AI ▲ OPEN SOURCE; greetings accent, topics foreground; no fake quotes |
 
 ## File structure
 
 ```
 (repo root = CFA-Society-Mexico/.github)
 ├── profile/README.md                  org profile page rendered by GitHub
-├── profile/greeting.svg               generated greeting animation (committed output)
+├── profile/ticker.svg                 generated ticker animation (committed output)
 ├── scripts/svgkit.py                  copied as-is from alanvaa06/alanvaa06
-├── scripts/generate_greeting.py       adapted from alanvaa06/alanvaa06
-├── assets/fonts/                      jbmono-ramp.woff2, jbmono-latin.woff2, OFL.txt (copied)
+├── scripts/generate_ticker.py         ticker generator (pure Python)
+├── assets/fonts/                      jbmono-latin-bold.woff2, OFL.txt (copied from alanvaa06/alanvaa06)
 ├── RESPONSIBLE_AI.md                  full principles, ES + EN
 ├── CONTRIBUTING.md                    quality bar + fork/PR flow, ES + EN
 ├── CODE_OF_CONDUCT.md                 Contributor Covenant 2.1, ES + EN
@@ -51,8 +51,8 @@ for org-level community health files.
 
 Length target: about one screen of Spanish above the `<details>` fold.
 
-0. **Greeting animation.** Centered `<img src="greeting.svg" width="560"
-   alt="Bienvenidos / Welcome / Bem-vindos, typed in ASCII">`. See "Greeting animation" below.
+0. **Ticker.** Centered `<img src="ticker.svg" width="100%" alt="Ticker: ...">`. See "Ticker animation"
+   below.
 1. **Hero (bilingual).** `# CFA Society México` + ES tagline + EN tagline (italic). Badges:
    License MIT, PRs welcome, GitHub Discussions.
 2. **Quiénes somos.** 3-4 lines: community of finance professionals in Mexico and Latam; open-source
@@ -99,32 +99,30 @@ Length target: about one screen of Spanish above the `<details>` fold.
   documented. Bilingual labels inline (`ES / EN`).
 - **`README.md`**: one bilingual line explaining the repo holds the org profile and defaults.
 
-## Greeting animation
+## Ticker animation
 
-Source: https://github.com/alanvaa06/alanvaa06 (`scripts/generate_greeting.py`, `scripts/svgkit.py`,
-`assets/fonts/`), owned by the same author, so copying is fine. Fonts: JetBrains Mono subsets, OFL
-(keep `OFL.txt`).
+A stock-ticker tape scrolls right to left:
+`BIENVENIDOS ▲ WELCOME ▲ BEM-VINDOS ▲ FINANZAS ▲ AGENTIC AI ▲ OPEN SOURCE`, looping.
 
-Adaptations to `generate_greeting.py`:
-- `WORDS = [("BIENVENIDOS","latin"), ("WELCOME","latin"), ("BEM-VINDOS","latin")]`;
-  `FONTS` reduced to the `latin` entry (Consolas Bold, 8 rows).
-- `CAPTION = "finanzas / IA responsable / código abierto"`.
-- Output path `profile/greeting.svg` (was `assets/greeting.svg`).
-- Everything else unchanged: ASCII ramp `" .:-=+*#%@"`, STEP 2.5s (loop = 7.5s), row-staggered
-  clipPath typing wipe, cursor bar, hold/fade, SMIL only (GitHub strips scripts, runs SMIL),
-  theme-aware palette via `prefers-color-scheme`, fonts embedded as base64.
-- Console output stays ASCII-only (Windows cp1252).
+- Generator: `scripts/generate_ticker.py`, pure Python (no Pillow/numpy, no system fonts). Output
+  `profile/ticker.svg` is committed; regenerate only when wording changes. No CI.
+- Font: JetBrains Mono Bold Latin subset (`jbmono-latin-bold.woff2`, OFL), embedded as base64 via
+  `svgkit.font_face`. Monospace advance 0.6 em lets the script compute every x position exactly.
+- Colors: greetings in accent blue, topics in foreground, `▲` separators drawn as SVG paths (the font
+  subset has no `▲`) in GitHub green (`#3fb950` dark / `#1a7f37` light). All theme-aware via
+  `prefers-color-scheme`.
+- Motion: one SMIL `animateTransform` translates the tape by exactly one period at 60 px/s
+  (~17.8s loop). The tape is repeated past `W + period` so the loop has no visible seam.
+- Frame: 960x56 viewBox, thin top/bottom rules, luminance mask fading both edges (works on any
+  page background).
+- No fake price changes or percentages: in a CFA org they could read as real market data.
 
-Run locally on Windows: `pip install pillow numpy`, `python scripts/generate_greeting.py`.
-Needs `C:\Windows\Fonts\consolab.ttf`. Output committed; regenerate only when wording changes. No CI.
+Tests (`tests/test_ticker.py`): word order, class per word, no `<script>`, seamless loop (shift ==
+period, every first-copy word reappears one period later, tape covers `W + period`), all glyphs
+present in the embedded font.
 
-Risks, checked during verification:
-1. Resolved during planning: `jbmono-latin.woff2` has `ó` but lacks `·` (U+00B7), so the caption
-   uses ` / ` separators. A test asserts every caption glyph exists in the embedded font.
-2. Relative `greeting.svg` may not resolve on the org profile page. Fallback: absolute URL
-   `https://github.com/CFA-Society-Mexico/.github/raw/main/profile/greeting.svg`.
-3. `BIENVENIDOS` (11 chars) may hit the 124-column cap and render slightly smaller. Cosmetic;
-   accepted.
+Verified: relative `src` resolves on the org profile page (GitHub rewrites it to
+`.../raw/main/profile/<file>.svg`).
 
 ## Links and values
 
@@ -153,10 +151,9 @@ Risks, checked during verification:
 
 ## Verification
 
-- Greeting SVG opened locally in a browser, light and dark scheme: 3 words cycle, loop restarts
-  cleanly, no word visible before its first cycle, caption glyphs (`ó`, `/`) render in JetBrains
-  Mono.
-- Markdown renders correctly on GitHub (preview after push): greeting animates, table, badges,
+- Ticker SVG opened locally over HTTP, light and dark scheme: scrolls smoothly, loop has no visible
+  seam, greetings blue, topics foreground, triangles green, edges fade.
+- Markdown renders correctly on GitHub (preview after push): ticker animates, table, badges,
   `<details>` block.
 - All links resolve (except the `TODO` email).
 - No `TODO` other than the `TODO-EMAIL` token (enforced by `tests/test_docs.py`).

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="greeting.svg" width="560" alt="Bienvenidos / Welcome / Bem-vindos, typed in ASCII">
+  <img src="ticker.svg" width="100%" alt="Ticker: Bienvenidos, Welcome, Bem-vindos, Finanzas, Agentic AI, Open Source">
 </p>
 
 <h1 align="center">CFA Society México</h1>
@@ -115,5 +115,5 @@ Full guide: [CONTRIBUTING.md](https://github.com/CFA-Society-Mexico/.github/blob
 <sub>
 <b>Aviso legal.</b> Contenido educativo; no constituye asesoría de inversión. CFA® y Chartered Financial Analyst® son marcas registradas propiedad de CFA Institute. Los proyectos son contribuciones de la comunidad y no están respaldados por CFA Institute.<br>
 <b>Disclaimer.</b> Educational content; not investment advice. CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute. Projects are community contributions and are not endorsed by CFA Institute.<br>
-Saludo dibujado por <a href="https://github.com/CFA-Society-Mexico/.github/blob/main/scripts/generate_greeting.py">el script de este repo</a>, adaptado de <a href="https://github.com/alanvaa06/alanvaa06">alanvaa06</a>. Tipografía / Typeface: JetBrains Mono, OFL.
+Cinta dibujada por <a href="https://github.com/CFA-Society-Mexico/.github/blob/main/scripts/generate_ticker.py">el script de este repo</a>, con helpers de <a href="https://github.com/alanvaa06/alanvaa06">alanvaa06</a>. Tipografía / Typeface: JetBrains Mono, OFL.
 </sub>
