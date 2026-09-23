@@ -22,13 +22,18 @@ skills, and advance the profession.
 | 5 | Repo scope | README + RESPONSIBLE_AI + CONTRIBUTING + CODE_OF_CONDUCT + PR template |
 | 6 | Community links | Website + LinkedIn + contact email + GitHub Discussions |
 | 7 | Bilingual layout | Shared bilingual hero + table; Spanish body open; English in one `<details>` |
-| 8 | Header visual | Text only, no banner (org avatar already rendered by GitHub) |
+| 8 | Header visual | ASCII greeting animation (SVG, adapted from alanvaa06/alanvaa06), then text hero; no org stats, no CI |
+| 9 | Greeting content | BIENVENIDOS -> WELCOME -> BEM-VINDOS; caption `finanzas · IA responsable · código abierto` |
 
 ## File structure
 
 ```
 (repo root = CFA-Society-Mexico/.github)
 ├── profile/README.md                  org profile page rendered by GitHub
+├── profile/greeting.svg               generated greeting animation (committed output)
+├── scripts/svgkit.py                  copied as-is from alanvaa06/alanvaa06
+├── scripts/generate_greeting.py       adapted from alanvaa06/alanvaa06
+├── assets/fonts/                      jbmono-ramp.woff2, jbmono-latin.woff2, OFL.txt (copied)
 ├── RESPONSIBLE_AI.md                  full principles, ES + EN
 ├── CONTRIBUTING.md                    quality bar + fork/PR flow, ES + EN
 ├── CODE_OF_CONDUCT.md                 Contributor Covenant 2.1, ES + EN
@@ -45,6 +50,8 @@ for org-level community health files.
 
 Length target: about one screen of Spanish above the `<details>` fold.
 
+0. **Greeting animation.** Centered `<img src="greeting.svg" width="560"
+   alt="Bienvenidos / Welcome / Bem-vindos, typed in ASCII">`. See "Greeting animation" below.
 1. **Hero (bilingual).** `# CFA Society México` + ES tagline + EN tagline (italic). Badges:
    License MIT, PRs welcome, GitHub Discussions.
 2. **Quiénes somos.** 3-4 lines: community of finance professionals in Mexico and Latam; open-source
@@ -91,6 +98,33 @@ Length target: about one screen of Spanish above the `<details>` fold.
   documented. Bilingual labels inline (`ES / EN`).
 - **`README.md`**: one bilingual line explaining the repo holds the org profile and defaults.
 
+## Greeting animation
+
+Source: https://github.com/alanvaa06/alanvaa06 (`scripts/generate_greeting.py`, `scripts/svgkit.py`,
+`assets/fonts/`), owned by the same author, so copying is fine. Fonts: JetBrains Mono subsets, OFL
+(keep `OFL.txt`).
+
+Adaptations to `generate_greeting.py`:
+- `WORDS = [("BIENVENIDOS","latin"), ("WELCOME","latin"), ("BEM-VINDOS","latin")]`;
+  `FONTS` reduced to the `latin` entry (Consolas Bold, 8 rows).
+- `CAPTION = "finanzas · IA responsable · código abierto"`.
+- Output path `profile/greeting.svg` (was `assets/greeting.svg`).
+- Everything else unchanged: ASCII ramp `" .:-=+*#%@"`, STEP 2.5s (loop = 7.5s), row-staggered
+  clipPath typing wipe, cursor bar, hold/fade, SMIL only (GitHub strips scripts, runs SMIL),
+  theme-aware palette via `prefers-color-scheme`, fonts embedded as base64.
+- Console output stays ASCII-only (Windows cp1252).
+
+Run locally on Windows: `pip install pillow numpy`, `python scripts/generate_greeting.py`.
+Needs `C:\Windows\Fonts\consolab.ttf`. Output committed; regenerate only when wording changes. No CI.
+
+Risks, checked during verification:
+1. `jbmono-latin.woff2` may lack `ó` or `·` -> caption glyphs fall back to system monospace.
+   Fix: re-subset the font to include them, or drop the accent/middot.
+2. Relative `greeting.svg` may not resolve on the org profile page. Fallback: absolute URL
+   `https://github.com/CFA-Society-Mexico/.github/raw/main/profile/greeting.svg`.
+3. `BIENVENIDOS` (11 chars) may hit the 124-column cap and render slightly smaller. Cosmetic;
+   accepted.
+
 ## Links and values
 
 | Item | Value | Status |
@@ -113,10 +147,15 @@ Length target: about one screen of Spanish above the `<details>` fold.
 
 - Adding a license to `ai-for-finance-recursos` (currently none = all rights reserved). Flagged,
   handled separately.
-- Issue templates, `SECURITY.md`, banner image, auto-generated project table (revisit at ~15 repos).
+- Issue templates, `SECURITY.md`, auto-generated project table, nightly org stats SVGs
+  (revisit at ~10-15 repos).
 
 ## Verification
 
-- Markdown renders correctly on GitHub (preview after push): table, badges, `<details>` block.
+- Greeting SVG opened locally in a browser, light and dark scheme: 3 words cycle, loop restarts
+  cleanly, no word visible before its first cycle, caption glyphs (`ó`, `·`) render in JetBrains
+  Mono.
+- Markdown renders correctly on GitHub (preview after push): greeting animates, table, badges,
+  `<details>` block.
 - All links resolve (except the `TODO` email).
 - No `TODO` other than the email placeholder.
