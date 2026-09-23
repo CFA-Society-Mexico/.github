@@ -67,7 +67,7 @@ def test_profile_readme_sections():
         "https://github.com/CFA-Society-Mexico/ai-for-finance-recursos",
         "https://www.cfasociety.org/mexico",
         "https://www.linkedin.com/company/cfa-society-mexico/",
-        "https://github.com/orgs/CFA-Society-Mexico/discussions",
+        "https://github.com/CFA-Society-Mexico/.github/issues",
         CONTACT,
         "not endorsed by CFA Institute",
     ]:
@@ -102,3 +102,11 @@ def test_pr_template_checklist():
     assert text.count("- [ ] ") == 6
     # rendered inside other repos' PRs, so links must be absolute
     assert "](" not in text or "](https://" in text
+
+
+def test_no_discussions_references():
+    # Discussions is disabled for now; ideas and questions go to issues
+    for p in md_files():
+        assert "discussion" not in p.read_text(encoding="utf-8").lower(), str(
+            p.relative_to(ROOT)
+        )

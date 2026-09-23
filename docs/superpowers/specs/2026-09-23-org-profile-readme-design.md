@@ -20,7 +20,7 @@ skills, and advance the profession.
 | 3 | Responsible AI | 5 principle bullets in README + full `RESPONSIBLE_AI.md` |
 | 4 | Project showcase | Hand-curated table grouped by area, with author credit; plus pinned repos |
 | 5 | Repo scope | README + RESPONSIBLE_AI + CONTRIBUTING + CODE_OF_CONDUCT + PR template |
-| 6 | Community links | Website + LinkedIn + contact email + GitHub Discussions |
+| 6 | Community links | Website + LinkedIn + contact email + issues on `.github`. GitHub Discussions deliberately off for now (user decision, 2026-09-23) |
 | 7 | Bilingual layout | Shared bilingual hero + table; Spanish body open; English in one `<details>` |
 | 8 | Header visual | Stock-ticker tape (SMIL SVG, full width), then text hero; no org stats, no CI. Replaced the first ASCII greeting (too close to alanvaa06's personal profile) |
 | 9 | Ticker content | BIENVENIDOS ▲ WELCOME ▲ BEM-VINDOS ▲ FINANZAS ▲ AGENTIC AI ▲ OPEN SOURCE; greetings accent, topics foreground; no fake quotes |
@@ -54,7 +54,7 @@ Length target: about one screen of Spanish above the `<details>` fold.
 0. **Ticker.** Centered `<img src="ticker.svg" width="100%" alt="Ticker: ...">`. See "Ticker animation"
    below.
 1. **Hero (bilingual).** `# CFA Society México` + ES tagline + EN tagline (italic). Badges:
-   License MIT, PRs welcome, GitHub Discussions.
+   License MIT, PRs welcome.
 2. **Quiénes somos.** 3-4 lines: community of finance professionals in Mexico and Latam; open-source
    financial tools; responsible use of AI; showcase skills; advance the profession.
 3. **Proyectos / Projects.** Single shared table, bilingual headers
@@ -76,8 +76,8 @@ Length target: about one screen of Spanish above the `<details>` fold.
    Link: `RESPONSIBLE_AI.md`.
 5. **Cómo contribuir.** Three steps (fork -> build -> PR). Minimum bar: open-source license,
    reproducible (setup instructions, no hidden data), disclaimer present, AI-use disclosure.
-   Ideas and questions go to Discussions. Link: `CONTRIBUTING.md`.
-6. **Comunidad.** Website, LinkedIn, Discussions, email.
+   Ideas and questions go to issues on `.github`. Link: `CONTRIBUTING.md`.
+6. **Comunidad.** Website, LinkedIn, issues, email.
 7. **English** — one `<details><summary>English</summary>` block translating sections 2, 4, 5, 6.
 8. **Aviso legal / Disclaimer (bilingual, small text).** Educational content, not investment advice.
    CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute.
@@ -90,7 +90,7 @@ Length target: about one screen of Spanish above the `<details>` fold.
   of Confidentiality, V(A) Diligence and Reasonable Basis, V(B) Communication with Clients), and a
   concrete do/don't for a contributor.
 - **`CONTRIBUTING.md`**: Spanish then English. Fork/branch/PR flow; minimum bar (same 4 items as
-  README); how to propose a new project (Discussions -> repo created under org by maintainers);
+  README); how to propose a new project (issue on `.github` -> repo created under org by maintainers);
   how to get listed in the profile table (PR editing `profile/README.md`).
 - **`CODE_OF_CONDUCT.md`**: Contributor Covenant 2.1, official Spanish translation followed by the
   English original. Enforcement contact = the contact email.
@@ -131,16 +131,15 @@ Verified: relative `src` resolves on the org profile page (GitHub rewrites it to
 | LinkedIn | https://www.linkedin.com/company/cfa-society-mexico/ | confirmed by user |
 | Website | https://www.cfasociety.org/mexico | verified (HTTP 200) |
 | Contact email | `TODO-EMAIL` token (same token in every file) | **user to fill** |
-| Discussions | https://github.com/orgs/CFA-Society-Mexico/discussions | active after manual step |
+| Ideas / questions | https://github.com/CFA-Society-Mexico/.github/issues | active (Discussions disabled) |
 | License badge | MIT, pointing to this repo's own `LICENSE` | added: `ai-for-finance-recursos` has no license, so the badge must not imply all repos are MIT |
 
 ## Manual steps (user, in GitHub UI)
 
-1. Create public repo `CFA-Society-Mexico/.github` (or let Claude create it via `gh`, with approval).
-2. Enable Discussions on `.github` and set it as the org discussion repo
-   (Org Settings -> Discussions). Requires org owner rights (not verified).
-3. Pin the 3 repos on the org profile.
-4. Replace the email `TODO` and confirm the website URL.
+1. Done: public repo `CFA-Society-Mexico/.github` created by Claude via `gh` (user approved).
+2. Done: contact email set to staff@cfamexico.org; website verified.
+3. Pending: pin the 3 repos on the org profile.
+4. Not now: GitHub Discussions stays disabled until the user decides otherwise.
 
 ## Out of scope
 

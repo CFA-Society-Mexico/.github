@@ -11,7 +11,7 @@ México ni de la organización de GitHub.
 
 - Una herramienta nueva: calculadora, modelo, plugin, notebook o dataset público.
 - Mejoras a un proyecto existente: bugs, tests, documentación, traducciones.
-- Ideas y preguntas en [Discussions](https://github.com/orgs/CFA-Society-Mexico/discussions).
+- Ideas y preguntas en un [issue](https://github.com/CFA-Society-Mexico/.github/issues).
 
 ### Flujo
 
@@ -42,7 +42,7 @@ supuestos documentados.
 
 ### Proponer un proyecto nuevo
 
-1. Abre una discusión en la categoría **Ideas** con: problema, usuarios, alcance y tecnología.
+1. Abre un [issue](https://github.com/CFA-Society-Mexico/.github/issues) con: problema, usuarios, alcance y tecnología.
 2. Si hay interés, un maintainer crea el repositorio dentro de la organización y te da permisos de
    administración.
 3. También puedes construirlo en tu cuenta y pedir que se agregue a la tabla del perfil.
@@ -65,7 +65,7 @@ the GitHub organization.
 
 - A new tool: calculator, model, plugin, notebook or public dataset.
 - Improvements to an existing project: bugs, tests, documentation, translations.
-- Ideas and questions in [Discussions](https://github.com/orgs/CFA-Society-Mexico/discussions).
+- Ideas and questions in an [issue](https://github.com/CFA-Society-Mexico/.github/issues).
 
 ### Flow
 
@@ -96,7 +96,7 @@ assumptions.
 
 ### Propose a new project
 
-1. Open a discussion in the **Ideas** category with: problem, users, scope and technology.
+1. Open an [issue](https://github.com/CFA-Society-Mexico/.github/issues) with: problem, users, scope and technology.
 2. If there is interest, a maintainer creates the repository inside the organization and grants you
    admin rights.
 3. You can also build it in your own account and ask for it to be added to the profile table.

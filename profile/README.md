@@ -12,7 +12,6 @@
 <p align="center">
   <a href="https://github.com/CFA-Society-Mexico/.github/blob/main/LICENSE"><img src="https://img.shields.io/badge/licencia%20%2F%20license-MIT-blue" alt="License: MIT"></a>
   <a href="https://github.com/CFA-Society-Mexico/.github/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-bienvenidos%20%2F%20welcome-brightgreen" alt="PRs welcome"></a>
-  <a href="https://github.com/orgs/CFA-Society-Mexico/discussions"><img src="https://img.shields.io/badge/GitHub-Discussions-8957e5" alt="GitHub Discussions"></a>
 </p>
 
 ## Quiénes somos
@@ -50,7 +49,7 @@ Detalle completo: [RESPONSIBLE_AI.md](https://github.com/CFA-Society-Mexico/.git
 
 Cualquier persona puede contribuir; no necesitas ser miembro.
 
-1. Haz fork del repositorio (o propón un proyecto nuevo en [Discussions](https://github.com/orgs/CFA-Society-Mexico/discussions)).
+1. Haz fork del repositorio (o propón un proyecto nuevo con un [issue](https://github.com/CFA-Society-Mexico/.github/issues)).
 2. Construye tu cambio en una rama.
 3. Abre un pull request; un maintainer lo revisa.
 
@@ -62,7 +61,7 @@ Guía completa: [CONTRIBUTING.md](https://github.com/CFA-Society-Mexico/.github/
 
 - Sitio web: [cfasociety.org/mexico](https://www.cfasociety.org/mexico)
 - LinkedIn: [CFA Society México](https://www.linkedin.com/company/cfa-society-mexico/)
-- Preguntas e ideas: [GitHub Discussions](https://github.com/orgs/CFA-Society-Mexico/discussions)
+- Preguntas e ideas: [issues](https://github.com/CFA-Society-Mexico/.github/issues)
 - Contacto: [staff@cfamexico.org](mailto:staff@cfamexico.org)
 
 <details>
@@ -93,7 +92,7 @@ Full detail: [RESPONSIBLE_AI.md](https://github.com/CFA-Society-Mexico/.github/b
 
 Anyone can contribute; membership is not required.
 
-1. Fork the repository (or propose a new project in [Discussions](https://github.com/orgs/CFA-Society-Mexico/discussions)).
+1. Fork the repository (or propose a new project in an [issue](https://github.com/CFA-Society-Mexico/.github/issues)).
 2. Build your change on a branch.
 3. Open a pull request; a maintainer reviews it.
 
@@ -105,7 +104,7 @@ Full guide: [CONTRIBUTING.md](https://github.com/CFA-Society-Mexico/.github/blob
 
 - Website: [cfasociety.org/mexico](https://www.cfasociety.org/mexico)
 - LinkedIn: [CFA Society México](https://www.linkedin.com/company/cfa-society-mexico/)
-- Questions and ideas: [GitHub Discussions](https://github.com/orgs/CFA-Society-Mexico/discussions)
+- Questions and ideas: [issues](https://github.com/CFA-Society-Mexico/.github/issues)
 - Contact: [staff@cfamexico.org](mailto:staff@cfamexico.org)
 
 </details>
