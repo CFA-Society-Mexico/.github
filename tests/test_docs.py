@@ -18,6 +18,7 @@ REQUIRED = [
     "profile/README.md",
     "CODE_OF_CONDUCT.md",
     "RESPONSIBLE_AI.md",
+    "CONTRIBUTING.md",
 ]
 
 LINK = re.compile(r'(?:\]\(|src="|href=")([^)"#\s]+)')
@@ -85,3 +86,10 @@ def test_responsible_ai_covers_five_principles_in_both_languages():
     for std in ["V(A)", "V(B)", "III(E)", "II(A)", "III(C)", "I(C)"]:
         assert std in text, std
     assert text.count("### ") == 10
+
+
+def test_contributing_has_bar_and_disclosure_format():
+    text = (ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
+    assert "## Español" in text and "## English" in text
+    assert text.count("## Uso de IA / AI use") == 2
+    assert "profile/README.md" in text
