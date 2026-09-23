@@ -23,7 +23,7 @@ skills, and advance the profession.
 | 6 | Community links | Website + LinkedIn + contact email + GitHub Discussions |
 | 7 | Bilingual layout | Shared bilingual hero + table; Spanish body open; English in one `<details>` |
 | 8 | Header visual | ASCII greeting animation (SVG, adapted from alanvaa06/alanvaa06), then text hero; no org stats, no CI |
-| 9 | Greeting content | BIENVENIDOS -> WELCOME -> BEM-VINDOS; caption `finanzas · IA responsable · código abierto` |
+| 9 | Greeting content | BIENVENIDOS -> WELCOME -> BEM-VINDOS; caption `finanzas / IA responsable / código abierto` |
 
 ## File structure
 
@@ -39,6 +39,7 @@ skills, and advance the profession.
 ├── CODE_OF_CONDUCT.md                 Contributor Covenant 2.1, ES + EN
 ├── .github/pull_request_template.md   responsible-AI checklist, ES + EN
 ├── README.md                          one line: this repo holds org defaults
+├── LICENSE                            MIT, copyright CFA Society Mexico contributors
 └── docs/superpowers/specs/            this spec (harmless; GitHub ignores it)
 ```
 
@@ -107,7 +108,7 @@ Source: https://github.com/alanvaa06/alanvaa06 (`scripts/generate_greeting.py`, 
 Adaptations to `generate_greeting.py`:
 - `WORDS = [("BIENVENIDOS","latin"), ("WELCOME","latin"), ("BEM-VINDOS","latin")]`;
   `FONTS` reduced to the `latin` entry (Consolas Bold, 8 rows).
-- `CAPTION = "finanzas · IA responsable · código abierto"`.
+- `CAPTION = "finanzas / IA responsable / código abierto"`.
 - Output path `profile/greeting.svg` (was `assets/greeting.svg`).
 - Everything else unchanged: ASCII ramp `" .:-=+*#%@"`, STEP 2.5s (loop = 7.5s), row-staggered
   clipPath typing wipe, cursor bar, hold/fade, SMIL only (GitHub strips scripts, runs SMIL),
@@ -118,8 +119,8 @@ Run locally on Windows: `pip install pillow numpy`, `python scripts/generate_gre
 Needs `C:\Windows\Fonts\consolab.ttf`. Output committed; regenerate only when wording changes. No CI.
 
 Risks, checked during verification:
-1. `jbmono-latin.woff2` may lack `ó` or `·` -> caption glyphs fall back to system monospace.
-   Fix: re-subset the font to include them, or drop the accent/middot.
+1. Resolved during planning: `jbmono-latin.woff2` has `ó` but lacks `·` (U+00B7), so the caption
+   uses ` / ` separators. A test asserts every caption glyph exists in the embedded font.
 2. Relative `greeting.svg` may not resolve on the org profile page. Fallback: absolute URL
    `https://github.com/CFA-Society-Mexico/.github/raw/main/profile/greeting.svg`.
 3. `BIENVENIDOS` (11 chars) may hit the 124-column cap and render slightly smaller. Cosmetic;
@@ -130,10 +131,10 @@ Risks, checked during verification:
 | Item | Value | Status |
 |------|-------|--------|
 | LinkedIn | https://www.linkedin.com/company/cfa-society-mexico/ | confirmed by user |
-| Website | https://www.cfasociety.org/mexico | **assumed, user to confirm** |
-| Contact email | `TODO` placeholder | **user to fill** |
+| Website | https://www.cfasociety.org/mexico | verified (HTTP 200) |
+| Contact email | `TODO-EMAIL` token (same token in every file) | **user to fill** |
 | Discussions | https://github.com/orgs/CFA-Society-Mexico/discussions | active after manual step |
-| License badge | MIT (matches existing repos) | confirmed from repo metadata |
+| License badge | MIT, pointing to this repo's own `LICENSE` | added: `ai-for-finance-recursos` has no license, so the badge must not imply all repos are MIT |
 
 ## Manual steps (user, in GitHub UI)
 
@@ -153,9 +154,9 @@ Risks, checked during verification:
 ## Verification
 
 - Greeting SVG opened locally in a browser, light and dark scheme: 3 words cycle, loop restarts
-  cleanly, no word visible before its first cycle, caption glyphs (`ó`, `·`) render in JetBrains
+  cleanly, no word visible before its first cycle, caption glyphs (`ó`, `/`) render in JetBrains
   Mono.
 - Markdown renders correctly on GitHub (preview after push): greeting animates, table, badges,
   `<details>` block.
 - All links resolve (except the `TODO` email).
-- No `TODO` other than the email placeholder.
+- No `TODO` other than the `TODO-EMAIL` token (enforced by `tests/test_docs.py`).
