@@ -15,6 +15,7 @@ PLACEHOLDER = "TODO-EMAIL"
 REQUIRED = [
     "README.md",
     "LICENSE",
+    "profile/README.md",
 ]
 
 LINK = re.compile(r'(?:\]\(|src="|href=")([^)"#\s]+)')
@@ -44,3 +45,25 @@ def test_relative_links_resolve():
             if target.startswith(("http://", "https://", "mailto:")):
                 continue
             assert (p.parent / target).exists(), f"{p.relative_to(ROOT)} -> {target}"
+
+
+def test_profile_readme_sections():
+    text = (ROOT / "profile" / "README.md").read_text(encoding="utf-8")
+    for needle in [
+        'src="greeting.svg"',
+        "## Quiénes somos",
+        "## Proyectos / Projects",
+        "## IA responsable",
+        "## Cómo contribuir",
+        "## Comunidad",
+        "<summary><b>English</b></summary>",
+        "https://github.com/CFA-Society-Mexico/bsm-calculator",
+        "https://github.com/CFA-Society-Mexico/research_analyst",
+        "https://github.com/CFA-Society-Mexico/ai-for-finance-recursos",
+        "https://www.cfasociety.org/mexico",
+        "https://www.linkedin.com/company/cfa-society-mexico/",
+        "https://github.com/orgs/CFA-Society-Mexico/discussions",
+        PLACEHOLDER,
+        "not endorsed by CFA Institute",
+    ]:
+        assert needle in text, ascii(needle)
