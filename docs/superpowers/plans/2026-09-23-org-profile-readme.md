@@ -11,7 +11,7 @@
 **Spec:** `docs/superpowers/specs/2026-09-23-org-profile-readme-design.md`
 
 **Conventions for every task:**
-- Repo root: `C:\Proyectos\CFA-Society-Mexico` (already `git init`-ed on `main`, 2 spec commits).
+- Repo root: `C:\Proyectos\CFA-Society-Mexico` (already `git init`-ed on `main`, spec + plan already committed).
 - Run all commands in **Git Bash** from the repo root (`cd /c/Proyectos/CFA-Society-Mexico`). Do NOT use PowerShell `>` redirection for downloads: it re-encodes and corrupts binary files.
 - Console output of any script must be ASCII-only (Windows cp1252).
 - The contact email is the literal token `TODO-EMAIL` everywhere. It is the only allowed `TODO`.
@@ -1196,4 +1196,3 @@ Open `https://github.com/CFA-Society-Mexico` in the built-in browser. Check:
 2. Enable Discussions on `CFA-Society-Mexico/.github` and set it as the org discussion repo: Org Settings -> Discussions. Requires org owner rights.
 3. Pin `bsm-calculator`, `research_analyst`, `ai-for-finance-recursos` on the org profile.
 4. Out of scope, flagged: add a license to `ai-for-finance-recursos` (currently none = all rights reserved).
-````
