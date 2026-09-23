@@ -19,6 +19,7 @@ REQUIRED = [
     "CODE_OF_CONDUCT.md",
     "RESPONSIBLE_AI.md",
     "CONTRIBUTING.md",
+    ".github/pull_request_template.md",
 ]
 
 LINK = re.compile(r'(?:\]\(|src="|href=")([^)"#\s]+)')
@@ -93,3 +94,10 @@ def test_contributing_has_bar_and_disclosure_format():
     assert "## Español" in text and "## English" in text
     assert text.count("## Uso de IA / AI use") == 2
     assert "profile/README.md" in text
+
+
+def test_pr_template_checklist():
+    text = (ROOT / ".github" / "pull_request_template.md").read_text(encoding="utf-8")
+    assert text.count("- [ ] ") == 6
+    # rendered inside other repos' PRs, so links must be absolute
+    assert "](" not in text or "](https://" in text
