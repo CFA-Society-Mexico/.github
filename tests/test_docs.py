@@ -17,6 +17,7 @@ REQUIRED = [
     "LICENSE",
     "profile/README.md",
     "CODE_OF_CONDUCT.md",
+    "RESPONSIBLE_AI.md",
 ]
 
 LINK = re.compile(r'(?:\]\(|src="|href=")([^)"#\s]+)')
@@ -76,3 +77,11 @@ def test_code_of_conduct_has_both_languages_and_contact():
     assert "# Contributor Covenant Code of Conduct" in text
     assert text.count(PLACEHOLDER) == 2
     assert "INSERT" not in text and "+++" not in text
+
+
+def test_responsible_ai_covers_five_principles_in_both_languages():
+    text = (ROOT / "RESPONSIBLE_AI.md").read_text(encoding="utf-8")
+    assert "## Español" in text and "## English" in text
+    for std in ["V(A)", "V(B)", "III(E)", "II(A)", "III(C)", "I(C)"]:
+        assert std in text, std
+    assert text.count("### ") == 10
