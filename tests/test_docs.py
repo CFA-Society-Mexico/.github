@@ -16,6 +16,7 @@ REQUIRED = [
     "README.md",
     "LICENSE",
     "profile/README.md",
+    "CODE_OF_CONDUCT.md",
 ]
 
 LINK = re.compile(r'(?:\]\(|src="|href=")([^)"#\s]+)')
@@ -67,3 +68,11 @@ def test_profile_readme_sections():
         "not endorsed by CFA Institute",
     ]:
         assert needle in text, ascii(needle)
+
+
+def test_code_of_conduct_has_both_languages_and_contact():
+    text = (ROOT / "CODE_OF_CONDUCT.md").read_text(encoding="utf-8")
+    assert "# Código de Conducta convenido para Contribuyentes" in text
+    assert "# Contributor Covenant Code of Conduct" in text
+    assert text.count(PLACEHOLDER) == 2
+    assert "INSERT" not in text and "+++" not in text
