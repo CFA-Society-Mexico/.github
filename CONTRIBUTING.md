@@ -57,7 +57,8 @@ supuestos documentados.
 
 **Criterios de revisión**
 
-1. Es relevante para la profesión financiera en México y Latinoamérica.
+1. Es relevante para la profesión financiera en México, Latinoamérica y otros países de habla
+   hispana.
 2. Cumple el [requisito mínimo](#requisito-mínimo).
 3. No contiene datos confidenciales y declara cualquier relación comercial o con el empleador.
 4. Tiene quién lo mantenga.
@@ -150,7 +151,8 @@ assumptions.
 
 **Review criteria**
 
-1. Relevant to the finance profession in Mexico and Latin America.
+1. Relevant to the finance profession in Mexico, Latin America and other Spanish-speaking
+   countries.
 2. Meets the [minimum bar](#minimum-bar).
 3. Contains no confidential data and discloses any commercial or employer relationship.
 4. Has someone to maintain it.
