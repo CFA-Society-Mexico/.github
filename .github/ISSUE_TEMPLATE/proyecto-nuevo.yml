@@ -1,0 +1,90 @@
+name: Proyecto nuevo / New project
+description: Propón un proyecto nuevo para la organización. / Propose a new project for the organization.
+title: "[Proyecto nuevo / New project] "
+labels: ["propuesta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Antes de empezar**
+
+        - Las propuestas de proyectos nuevos se abren en [CFA-Society-Mexico/.github](https://github.com/CFA-Society-Mexico/.github/issues/new?template=proyecto-nuevo.yml). Bugs y mejoras de un proyecto existente van en su propio repositorio.
+        - **Este issue es público.** No incluyas datos personales, de contacto, de clientes ni información confidencial.
+        - Abrirlo no implica aceptación, compromiso ni respaldo de CFA Society México ni de CFA Institute. Nada se publica en el perfil hasta que los maintainers lo revisan y lo aceptan.
+        - Respondemos aquí en un plazo estimado de 1 a 2 semanas; puede tardar más, porque revisamos como voluntarios. GitHub te avisa por correo cuando respondemos.
+        - ¿Prefieres que tu agente de IA te entreviste y lo llene por ti? Usa la [skill proponer-proyecto](https://github.com/CFA-Society-Mexico/.github/blob/main/skills/proponer-proyecto/SKILL.md).
+        - Criterios de revisión: [CONTRIBUTING.md](https://github.com/CFA-Society-Mexico/.github/blob/main/CONTRIBUTING.md#proponer-un-proyecto-nuevo).
+
+        **Before you start**
+
+        - New project proposals go in [CFA-Society-Mexico/.github](https://github.com/CFA-Society-Mexico/.github/issues/new?template=proyecto-nuevo.yml). Bugs and improvements to an existing project go in that project's repository.
+        - **This issue is public.** Do not include personal, contact, client or confidential information.
+        - Opening it does not imply acceptance, commitment or endorsement by CFA Society México or CFA Institute. Nothing is published on the profile until the maintainers review and accept it.
+        - We reply here within an estimated 1 to 2 weeks; it may take longer, since we review as volunteers. GitHub emails you when we reply.
+        - Prefer that your AI agent interviews you and fills this in? Use the [proponer-proyecto skill](https://github.com/CFA-Society-Mexico/.github/blob/main/skills/proponer-proyecto/SKILL.md).
+        - Review criteria: [CONTRIBUTING.md](https://github.com/CFA-Society-Mexico/.github/blob/main/CONTRIBUTING.md#propose-a-new-project).
+  - type: input
+    id: nombre
+    attributes:
+      label: Nombre del proyecto / Project name
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué problema resuelve y para quién? / What problem does it solve, and for whom?
+      description: Usuarios, alcance y tecnología. / Users, scope and technology.
+    validations:
+      required: true
+  - type: dropdown
+    id: estado
+    attributes:
+      label: Estado / Status
+      options:
+        - Idea
+        - En desarrollo / In development
+        - Terminado / Finished
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Link al repositorio o demo / Link to repository or demo
+      description: Si es solo una idea, escribe N/A. / If it is only an idea, write N/A.
+      placeholder: https://github.com/...
+    validations:
+      required: true
+  - type: textarea
+    id: uso-ia
+    attributes:
+      label: Uso de IA / AI use
+      description: Herramientas, para qué y quién revisó qué. / Tools, what for, and who reviewed what.
+      placeholder: |
+        - Herramientas / Tools:
+        - Para qué / What for:
+        - Revisión humana / Human review:
+    validations:
+      required: true
+  - type: textarea
+    id: datos
+    attributes:
+      label: Fuentes de datos / Data sources
+      description: Opcional. Fuentes públicas o sintéticas y su licencia. / Optional. Public or synthetic sources and their license.
+  - type: textarea
+    id: comentarios
+    attributes:
+      label: Comentarios / Comments
+      description: Opcional. Declara aquí cualquier relación comercial o con tu empleador ligada al proyecto. / Optional. Disclose any commercial or employer relationship tied to the project here.
+  - type: checkboxes
+    id: confirmaciones
+    attributes:
+      label: Confirmaciones / Confirmations
+      options:
+        - label: No incluyo datos de clientes, confidenciales ni información material no pública. / I include no client, confidential or material non-public information.
+          required: true
+        - label: Tengo derecho a publicar el código y declaro en comentarios cualquier relación comercial o con mi empleador. / I have the right to publish the code and disclose any commercial or employer relationship in comments.
+          required: true
+        - label: El proyecto cumple el requisito mínimo de CONTRIBUTING.md. / The project meets the minimum bar in CONTRIBUTING.md.
+          required: true
+        - label: Entiendo que esto es una propuesta y no una aceptación. / I understand this is a proposal, not an acceptance.
+          required: true

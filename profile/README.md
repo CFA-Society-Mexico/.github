@@ -31,7 +31,7 @@ Aquí puedes mostrar tu trabajo, aprender del de otros y contribuir al avance de
 | Equity Research | [research_analyst](https://github.com/CFA-Society-Mexico/research_analyst) | Plugin de equity research para Claude Code, Cursor y Codex: IFRS/US GAAP/NIF, modelo de 3 estados, valuación multi-método. / Equity research plugin for Claude Code, Cursor and Codex: IFRS/US GAAP/NIF, 3-statement model, multi-method valuation. | Alan Vazquez, CFA ([@alanvaa06](https://github.com/alanvaa06)) |
 | Recursos de IA / AI Resources | [ai-for-finance-recursos](https://github.com/CFA-Society-Mexico/ai-for-finance-recursos) | Recursos de IA aplicada a finanzas. / Resources on AI applied to finance. | [@edgarcalderonmx](https://github.com/edgarcalderonmx) |
 
-¿Construiste algo? Agrégalo con un PR. / *Built something? Add it via PR.*
+¿Construiste algo? [Propón tu proyecto](https://github.com/CFA-Society-Mexico/.github/issues/new?template=proyecto-nuevo.yml). / *Built something? [Propose your project](https://github.com/CFA-Society-Mexico/.github/issues/new?template=proyecto-nuevo.yml).*
 
 ## IA responsable
 
@@ -49,7 +49,7 @@ Detalle completo: [RESPONSIBLE_AI.md](https://github.com/CFA-Society-Mexico/.git
 
 Cualquier persona puede contribuir; no necesitas ser miembro.
 
-1. Haz fork del repositorio (o propón un proyecto nuevo con un [issue](https://github.com/CFA-Society-Mexico/.github/issues)).
+1. Haz fork del repositorio (o propón un proyecto nuevo con el [formulario](https://github.com/CFA-Society-Mexico/.github/issues/new?template=proyecto-nuevo.yml)).
 2. Construye tu cambio en una rama.
 3. Abre un pull request; un maintainer lo revisa.
 
@@ -92,7 +92,7 @@ Full detail: [RESPONSIBLE_AI.md](https://github.com/CFA-Society-Mexico/.github/b
 
 Anyone can contribute; membership is not required.
 
-1. Fork the repository (or propose a new project in an [issue](https://github.com/CFA-Society-Mexico/.github/issues)).
+1. Fork the repository (or propose a new project with the [form](https://github.com/CFA-Society-Mexico/.github/issues/new?template=proyecto-nuevo.yml)).
 2. Build your change on a branch.
 3. Open a pull request; a maintainer reviews it.
 
