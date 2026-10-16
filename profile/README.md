@@ -29,7 +29,7 @@ Aquí puedes mostrar tu trabajo, aprender del de otros y contribuir al avance de
 |---|---|---|---|
 | Derivados / Derivatives | [bsm-calculator](https://github.com/CFA-Society-Mexico/bsm-calculator) ([demo](https://cfa-society-mexico.github.io/bsm-calculator/)) | Calculadora Black-Scholes-Merton: precios de opciones europeas y griegas en vivo. / Black-Scholes-Merton calculator: European option prices and live Greeks. | Eduardo Ramos, CFA ([@EERamos](https://github.com/EERamos)) |
 | Equity Research | [research_analyst](https://github.com/CFA-Society-Mexico/research_analyst) | Plugin de equity research para Claude Code, Cursor y Codex: IFRS/US GAAP/NIF, modelo de 3 estados, valuación multi-método. / Equity research plugin for Claude Code, Cursor and Codex: IFRS/US GAAP/NIF, 3-statement model, multi-method valuation. | Alan Vazquez, CFA ([@alanvaa06](https://github.com/alanvaa06)) |
-| Recursos de IA / AI Resources | [ai-for-finance-recursos](https://github.com/CFA-Society-Mexico/ai-for-finance-recursos) | Recursos de IA aplicada a finanzas. / Resources on AI applied to finance. | [@edgarcalderonmx](https://github.com/edgarcalderonmx) |
+| Recursos de IA / AI Resources | [ai-for-finance-recursos](https://github.com/CFA-Society-Mexico/ai-for-finance-recursos) | Recursos de IA aplicada a finanzas. / Resources on AI applied to finance. | Edgar Calderon, CFA ([@edgarcalderonmx](https://github.com/edgarcalderonmx)) |
 
 ¿Construiste algo? [Propón tu proyecto](https://github.com/CFA-Society-Mexico/propuestas/issues/new?template=proyecto-nuevo.yml). / *Built something? [Propose your project](https://github.com/CFA-Society-Mexico/propuestas/issues/new?template=proyecto-nuevo.yml).*
 
