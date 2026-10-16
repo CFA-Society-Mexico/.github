@@ -44,9 +44,9 @@ supuestos documentados.
 ### Proponer un proyecto nuevo
 
 1. Abre un issue con el formulario
-   [Proyecto nuevo](https://github.com/CFA-Society-Mexico/.github/issues/new?template=proyecto-nuevo.yml)
-   en este repositorio. Si prefieres que tu agente de IA te entreviste y lo llene por ti, usa la skill
-   [proponer-proyecto](skills/proponer-proyecto/SKILL.md).
+   [Proyecto nuevo](https://github.com/CFA-Society-Mexico/propuestas/issues/new?template=proyecto-nuevo.yml)
+   en el repositorio [propuestas](https://github.com/CFA-Society-Mexico/propuestas). Si prefieres que tu agente de IA te entreviste y lo llene por ti, usa la skill
+   [proponer-proyecto](https://github.com/CFA-Society-Mexico/propuestas/blob/main/skills/proponer-proyecto/SKILL.md).
 2. El issue es público: no incluyas datos personales, de contacto, de clientes ni información
    confidencial. Abrirlo no implica aceptación, compromiso ni respaldo de CFA Society México ni de
    CFA Institute.
@@ -137,9 +137,9 @@ assumptions.
 ### Propose a new project
 
 1. Open an issue with the
-   [New project](https://github.com/CFA-Society-Mexico/.github/issues/new?template=proyecto-nuevo.yml)
-   form in this repository. If you prefer that your AI agent interviews you and fills it in, use the
-   [proponer-proyecto](skills/proponer-proyecto/SKILL.md) skill.
+   [New project](https://github.com/CFA-Society-Mexico/propuestas/issues/new?template=proyecto-nuevo.yml)
+   form in the [propuestas](https://github.com/CFA-Society-Mexico/propuestas) repository. If you prefer that your AI agent interviews you and fills it in, use the
+   [proponer-proyecto](https://github.com/CFA-Society-Mexico/propuestas/blob/main/skills/proponer-proyecto/SKILL.md) skill.
 2. The issue is public: do not include personal, contact, client or confidential information.
    Opening it does not imply acceptance, commitment or endorsement by CFA Society México or CFA
    Institute.
