@@ -110,3 +110,20 @@ def test_no_discussions_references():
         assert "discussion" not in p.read_text(encoding="utf-8").lower(), str(
             p.relative_to(ROOT)
         )
+
+
+def test_contributing_proposal_flow():
+    text = (ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
+    for needle in [
+        "CFA-Society-Mexico/propuestas/issues/new?template=proyecto-nuevo.yml",
+        "CFA-Society-Mexico/propuestas/blob/main/skills/proponer-proyecto/SKILL.md",
+        "## Contribuci\u00f3n comunitaria / Community contribution",
+        "**Criterios de revisi\u00f3n**",
+        "**Review criteria**",
+    ]:
+        assert needle in text, ascii(needle)
+
+
+def test_profile_links_to_proposals_repo():
+    text = (ROOT / "profile" / "README.md").read_text(encoding="utf-8")
+    assert text.count("CFA-Society-Mexico/propuestas/issues/new?template=proyecto-nuevo.yml") == 4
